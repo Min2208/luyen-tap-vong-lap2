@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 4</title>
+</head>
+<body>
+<button onclick="output()">submit</button>
+<script>
+    function output() {
+        let count="<table>"
+        for (let i=0;i<7;i++){
+            count=count + "<tr>";
+            for (let j=0;j<21;j++){
+                if (i==0 || j==0 || i==6 || j== 20){
+                    count=count + "<td>" + "*" + "</td>";
+                }else {
+                    count=count + "<td>" + " " + "</td>";
+                }
+            }
+            count=count + "</tr>";
+        }
+        count=count + "</table>";
+        document.write(count);
+    }
+</script>
+</body>
+</html>

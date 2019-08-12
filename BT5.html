@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 5</title>
+</head>
+<body>
+<input id="amount">
+So tien vay<br>
+<input id="time">
+So thang vay<br>
+<select>
+    <option value="0.011" id="ls">1.1</option>
+</select>Lai xuat<br>
+<button onclick="resutl()">Submit</button>
+<script>
+    function resutl() {
+        let amount=parseInt(document.getElementById('amount').value);
+        let ls=document.getElementById('ls').value;
+        let time=document.getElementById('time').value;
+        let result;
+        for (let i=1; i<= time; i++){
+            result=amount*ls;
+            amount+=result;
+        }
+        document.write(result);
+    }
+</script>
+</body>
+</html>

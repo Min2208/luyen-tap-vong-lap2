@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 6</title>
+</head>
+<body>
+<button onclick="heat()">in trai tim</button>
+<script>
+    function heat() {
+        let count = "<table  cellpadding='0' cellspacing='0' width='8   %'>";
+        for (let i = 0; i < 7; i++) {
+            count = count + "<tr>";
+            for (let j = 0; j < 9; j++) {
+                if (i <= 2 && j <= 2 && j + i >= 2) {
+                    count = count + "<td>" + "*" + "</td>";
+
+                } else if (i <= 2 && j <= 2 && j + i < 2) {
+                    count = count + "<td>" + " " + "</td>";
+                } else if (i <= 2 && j <= 4 && i + 2 >= j) {
+                    count = count + "<td>" + "*" + "</td>";
+                } else if (i <= 2 && j <= 4 && i + 2 < j) {
+                    count = count + "<td>" + " " + "</td>";
+                } else if (i <= 2 && j <= 6 && j + i >= 6) {
+                    count = count + "<td>" + "*" + "</td>";
+                } else if (i <= 2 && j <= 6 && j + i < 6) {
+                    count = count + "<td>" + " " + "</td>";
+                }else if (i <= 2 && j <= 8 && i + 6 >= j) {
+                    count = count + "<td>" + "*" + "</td>";
+                }else if (i <= 2 && j <= 4 && i + 6 < j) {
+                    count = count + "<td>" + " " + "</td>";
+                }else if (i>2 && j <=4 && i-2<=j){
+                    count = count + "<td>" + "*" + "</td>";
+                }else if (i>2 && j <=4 && i-2>j){
+                    count = count + "<td>" + " " + "</td>";
+                }else if (i>2 && j>4 && i+j<=10){
+                    count = count + "<td>" + "*" + "</td>";
+                }else if (i>2 && j>4 && i+j>10){
+                    count = count + "<td>" + " " + "</td>";
+                }
+
+            }
+            count = count + "</tr>";
+        }
+        count = count + "</table>";
+        document.write(count);
+    }
+</script>
+</body>
+</html>

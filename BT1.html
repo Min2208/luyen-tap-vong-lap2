@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In day Finonaci</title>
+</head>
+<body>
+<button onclick="finonaci()">Print Finonaci</button>
+<script>
+
+    function finonaci() {
+        let count=0;
+        let a=0, b=1, temp;
+        while(count < 100){
+            temp=a;
+            a=a + b;
+            b=temp;
+            document.write(b + " ");
+            count++;
+        }
+    }
+</script>
+</body>
+</html>

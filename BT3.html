@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giac vuong</title>
+</head>
+<body>
+<button onclick="triangle1()">Submit</button>
+<button onclick="triangle2()">Submit</button>
+<button onclick="triangle3()">Submit</button>
+<button onclick="triangle4()">Submit</button>
+<script>
+    function triangle1() {
+        let count="<table>"
+        for (let i=0; i<5; i++){
+            count=count + "<tr>";
+            for (let j=0; j<5;j++){
+                if (i>=j){
+                    count=count + "<td>" + "*" + "</td>";
+                }else {
+                    count=count + "<td>" + " " + "</td>";
+                }
+            }
+            count=count + "</tr>";
+        }
+        count=count + "</table>";
+        document.write(count);
+    }
+    function triangle2() {
+        let count="<table>"
+        for (let i=0; i<5; i++){
+            count=count + "<tr>";
+            for (let j=0; j<5;j++){
+                if (i+j<5){
+                    count=count + "<td>" + "*" + "</td>";
+                }else {
+                    count=count + "<td>" + " " + "</td>";
+                }
+            }
+            count=count + "</tr>";
+        }
+        count=count + "</table>";
+        document.write(count);
+
+    }
+    function triangle3() {
+        let count="<table>"
+        for (let i=0; i<5; i++){
+            count=count + "<tr>";
+            for (let j=0; j<5;j++){
+                if (i+j>=4){
+                    count=count + "<td>" + "*" + "</td>";
+                }else {
+                    count=count + "<td>" + " " + "</td>";
+                }
+            }
+            count=count + "</tr>";
+        }
+        count=count + "</table>";
+        document.write(count);
+
+    }
+    function triangle4() {
+        let count="<table>"
+        for (let i=0; i<5; i++){
+            count=count + "<tr>";
+            for (let j=0; j<5;j++){
+                if (i<=j){
+                    count=count + "<td>" + "*" + "</td>";
+                }else {
+                    count=count + "<td>" + " " + "</td>";
+                }
+            }
+            count=count + "</tr>";
+        }
+        count=count + "</table>";
+        document.write(count);
+
+
+    }
+</script>
+</body>
+</html>
